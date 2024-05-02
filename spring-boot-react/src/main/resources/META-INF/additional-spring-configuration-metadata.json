@@ -1,0 +1,14 @@
+{
+    "properties": [
+        {
+            "name": "server.http.port",
+            "type": "java.lang.String",
+            "description": "Http connection port for tomcat setting."
+        },
+        {
+            "name": "spring.storage.location",
+            "type": "java.lang.String",
+            "description": "Location for storage config"
+        }
+    ]
+}

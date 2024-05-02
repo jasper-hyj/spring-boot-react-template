@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "SpringBootReactApplication",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/spring-boot-react",
+      "mainClass": "com.example.SpringBootReactApplication",
+      "projectName": "example",
+      "args": "--spring.profiles.active=local",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

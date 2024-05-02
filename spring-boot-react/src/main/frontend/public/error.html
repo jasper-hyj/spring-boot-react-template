@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Error</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f5f5f5;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .error-container {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                padding: 20px;
+                max-width: 400px;
+                width: 100%;
+                text-align: center;
+            }
+            h1 {
+                color: #ff5252;
+            }
+            p {
+                color: #666;
+                margin-top: 10px;
+            }
+            a {
+                color: #2196f3;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="error-container">
+            <h1>Something Went Wrong</h1>
+            <p>Date: <span th:text="${timestamp}"></span></p>
+            <p>Path: <span th:text="${path}"></span></p>
+            <p>Error: <span th:text="${error}"></span></p>
+            <p>Status: <span th:text="${status}"></span></p>
+            <p>Message: <span th:text="${message}"></span></p>
+            <p><a href="/" title="Go to home page">Go back to home page</a></p>
+        </div>
+    </body>
+</html>

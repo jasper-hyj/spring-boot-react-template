@@ -1,0 +1,12 @@
+# Version for Docker compose file format
+version: "3.8"
+
+# All services in this compose
+services:
+  spring:
+    # Specify .env file used
+    env_file:
+      - ../.env
+
+    volumes:
+      - ../spring-boot-react:/app/spring-boot-react

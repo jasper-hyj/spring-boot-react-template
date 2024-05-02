@@ -1,0 +1,17 @@
+{
+  "java.compile.nullAnalysis.mode": "automatic",
+  "editor.detectIndentation": false,
+  "editor.indentSize": "tabSize",
+  "editor.tabSize": 4,
+
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "java.test.config": {
+    "name": "SpringBootReactApplicationTest",
+    "envFile": "${workspaceFolder}/.env"
+  },
+  "java.debug.settings.onBuildFailureProceed": true
+}

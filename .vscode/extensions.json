@@ -1,0 +1,14 @@
+{
+    "recommendations": [
+        "esbenp.prettier-vscode",
+
+        "vscjava.vscode-java-debug",
+        "redhat.java",
+        "vscjava.vscode-spring-boot-dashboard",
+        "vmware.vscode-spring-boot",
+        "vmware.vscode-boot-dev-pack",
+        "vscjava.vscode-java-pack",
+
+        "ms-azuretools.vscode-docker"
+    ]
+}

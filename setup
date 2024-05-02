@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Run maven build if the environment flag is vscode
+if [ "$1" == "vscode" ]; then
+    echo "$0: Setup vscode development environment"
+    cd "spring-boot-react" || exit
+    if [ -d "target/classes/static" ]; then
+        echo "Removing target/classes/static directory..."
+        rm -r "target/classes/static"
+    fi
+    ./mvnw package -Dmaven.test.skip=true
+    exit
+fi
+
+# Check if the environment flag is provided
+if [ "$1" == "dev" ]; then
+    echo "$0: Run docker in development mode"
+    docker-compose --env-file .env -f .docker/docker-compose.yml -f .docker/docker-compose.dev.yml up --build --force-recreate
+elif [ "$1" == "prod" ]; then
+    echo "$0: Run docker in production mode"
+    docker-compose --env-file prod.env -f .docker/docker-compose.yml -f .docker/docker-compose.prod.yml up --build --force-recreate --detach
+elif [ "$1" == "db" ]; then
+    echo "$0: Run Postgres Database"
+    docker-compose --env-file .env -f .docker/docker-compose.db.yml up --build --force-recreate --detach
+else
+    echo "Usage: $0 <vscode/dev/prod/db>"
+    exit 1
+fi

@@ -1,0 +1,20 @@
+# Version for Docker compose file format
+version: "3.8"
+
+# Name of the docker-compose (container)
+name: spring-boot-react
+services:
+  spring:
+    container_name: spring
+    build:
+      # Location of Dockerfile
+      context: ../spring-boot-react
+      # Argument use in the Dockerfile
+    # Map container's port to host: <host port>:<container port>
+    ports:
+      - "80:80"
+      - "443:443"
+    # Image name: <name>:<version>
+    image: spring-boot-react:0.0.1
+    # Automatically restart a container if exits
+    restart: unless-stopped
